@@ -11,15 +11,14 @@ outputs:
 runs:
   using: 'composite'
   steps:
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v4
       with:
-        node-version: '16'
+        node-version: '18'
 
     - id: install
       name: Install dependencies
       run: |
         npm install github:stamen/mapbox-gl-style-linter#v0.2.0 --global
-        echo "$(npx mapbox-gl-style-lint ${{ inputs.style-paths }})"
       shell: bash
 
     - id: run-lint
