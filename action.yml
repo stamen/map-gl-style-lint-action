@@ -23,7 +23,9 @@ runs:
     - id: run-lint
       name: Run lint command
       run: |
-        export LINTER_OUTPUT="$(npx mapbox-gl-style-lint ${{ inputs.style-paths }})"
+        mapbox-gl-style-lint
+        npx mapbox-gl-style-lint
+        export LINTER_OUTPUT="$(mapbox-gl-style-lint ${{ inputs.style-paths }})"
         LINTER_OUTPUT="${LINTER_OUTPUT//'%'/'%25'}"
         LINTER_OUTPUT="${LINTER_OUTPUT//$'\n'/'%0A'}"
         LINTER_OUTPUT="${LINTER_OUTPUT//$'\r'/'%0D'}"
