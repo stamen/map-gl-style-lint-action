@@ -18,7 +18,7 @@ runs:
     - id: install
       name: Install dependencies
       run: |
-        yarn install github:stamen/mapbox-gl-style-linter#v0.2.0
+        yarn add github:stamen/mapbox-gl-style-linter#v0.2.0
       shell: bash
 
     - id: run-lint
