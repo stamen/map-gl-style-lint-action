@@ -1,4 +1,4 @@
-# Lint Mapbox GL Style GitHub Action
+# Map GL Style Lint GitHub Action
 
 This is a GitHub Action definition that lints Mapbox GL styles in a repo.
 
